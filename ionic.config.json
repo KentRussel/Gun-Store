@@ -1,0 +1,7 @@
+{
+  "name": "product-list",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
