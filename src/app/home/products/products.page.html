@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>List of gun skins</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="products?.length">
+    <ion-item
+      *ngFor="let product of products"
+      [routerLink]="['/', 'home', 'products', 'product', product.id]"
+    >
+      <ion-label>
+        <div class="product-container">
+          <ion-img src="../../../assets/img/{{product?.fileName}}"></ion-img>
+          <div class="product-desc">
+            <p class="product-name">{{product?.name}}</p>
+            <p>{{product?.price}}</p>
+            <p class="product-desc">{{product?.description}}</p>
+            <p>{{product?.status}}</p>
+          </div>
+        </div>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

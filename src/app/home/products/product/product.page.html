@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <a slot="start">
+      <ion-back-button defaultHref="home/products"></ion-back-button>
+    </a>
+    <ion-title>{{product?.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img
+    class="product-img"
+    src="../../../../assets/img/{{product?.fileName}}"
+  >
+  </ion-img>
+  <div class="container">
+    <p class="product-name t-a">{{product?.name}}</p>
+    <p class="t-a">{{product?.status}}</p>
+    <p class="t-a">${{product?.price}}</p>
+    <p class="t-a">{{product?.description}}</p>
+  </div>
+</ion-content>
